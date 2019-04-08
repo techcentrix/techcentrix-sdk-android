@@ -1,11 +1,8 @@
 TechCentrix SDK is an Android framework for connecting mobile app and TechCentrix Bluetooth devices, like clips or wristbands. The SDK is provided as an Android Library that can be included in your application with Gradle. 
 
-* [TechCentrix SDK](#techcentrix-sdk)
+- [TechCentrix SDK](#techcentrix-sdk)
   * [Step 1 - Integrate your backend with TechCentrix backend](#step-1---integrate-your-backend-with-techcentrix-backend)
   * [Step 2 - Integrate your mobile application with TechCentrix SDK](#step-2---integrate-your-mobile-application-with-techcentrix-sdk)
-    + [Requirements](#requirements)
-    + [Installation with Gradle](#installation-with-gradle)
-    + [Project configuration](#project-configuration)
   * [Step 3 - SDK Initialization](#step-3---sdk-initialization)
   * [Step 4 - UI Configuration](#step-4---ui-configuration)
   * [Step 5 - SDK Usage](#step-5---sdk-usage)
@@ -14,23 +11,24 @@ TechCentrix SDK is an Android framework for connecting mobile app and TechCentri
 - [Credits](#credits)
 - [Licence](#licence)
 
-### TechCentrix SDK
+## TechCentrix SDK
 
 [Read more about our LED technology.](http://techcentrix.github.io/)
 
 ### Step 1 - Integrate your backend with TechCentrix backend
 
-[Read more about Step 1](http://techcentrix.github.io/quick-start-guide/#backend-integration)
+[Read more about Step 1](http://techcentrix.github.io/quick-start-guide#backend-integration)
 
 ### Step 2 - Integrate your mobile application with TechCentrix SDK
 
 #### Requirements
 
+* Kotlin (or Java)
 * Android 5.0 (API 21) or newer
 * project based on [AndroidX](https://developer.android.com/jetpack/androidx) libraries (old Android Support libraries are not supported)
 
 #### Installation with Gradle
-Add TechCentrix repository to your project-level `build.gradle` file. To access the repository, you need to obtain a username and password from TechCentrix:
+Add TechCentrix repository to your project-level `build.gradle` file. To access the repository, you need to obtain a username and password from [TechCentrix](https://techcentrix.com):
 ```
 allprojects {
     repositories {
@@ -38,7 +36,7 @@ allprojects {
         mavenCentral()
 
         maven {
-            url "https://artifactory.datalyticz.com/artifactory/android-sdk-release"
+            url "https://maven.techcentrix.com/artifactory/android-sdk-release"
 
             credentials {
                 username YOUR_USERNAME
@@ -110,12 +108,12 @@ Name | Description
 `tcx_secondary` | Secondary color that is used across the app
 
 #### Drawable resources
-Name | Description
---- | ---
-`tcx_img_product` | Name of an image that is used on a "List of Clips" screen <img src="website/img_product.png?raw=true" width="250">
-`tcx_img_product_add_new` | Name of an image that is used on a "Add New Clip" screen <img src="website/img_product_add_new.png?raw=true" width="250">
-`tcx_img_product_pairing` | Name of an image that is used on a Pairing screen <img src="website/img_product_pairing.png?raw=true" width="250">
-`tcx_img_product_pairing_on_off` | Name of an image that is used on a Pairing screen with zoomed On/Off button <img src="website/img_product_pairing_on_off.png?raw=true" width="250">
+Item | Description | Image  | Screenshot
+--- | --- | --- | ---
+`tcx_img_product` | Name of an image that is used on a "List of Clips" screen | <img src="website/assets/img_product.png?raw=true" width="250"> | <img src="website/img_product.png?raw=true" width="250">
+`tcx_img_product_add_new` | Name of an image that is used on a "Add New Clip" screen | <img src="website/assets/img_product_add_new.png?raw=true" width="250"> | <img src="website/img_product_add_new.png?raw=true" width="250">
+`tcx_img_product_pairing` | Name of an image that is used on a Pairing screen | <img src="website/assets/img_product_pairing.png?raw=true" width="250"> | <img src="website/img_product_pairing.png?raw=true" width="250">
+`tcx_img_product_pairing_on_off` | Name of an image that is used on a Pairing screen with zoomed On/Off button | <img src="website/assets/img_product_pairing_on_off.png?raw=true" width="250"> | <img src="website/img_product_pairing_on_off.png?raw=true" width="250">
 
 
 Your resources will overwrite SDK resources during building final APK as described in [Resource merging](https://developer.android.com/studio/write/add-resources.html#resource_merging).
@@ -123,7 +121,7 @@ Your resources will overwrite SDK resources during building final APK as describ
 **Important: You must provide images in MDPI, HDPI, XHDPI, XXHDPI, XXXHDPI densities.** If you don't provide images for all listed densities, your application will show SDK images on devices with densities for which you didn't provide resources.
 
 ### Step 5 - SDK Usage
-To use our SDK, you need a signed in user. You can create a new user or sign in an existing one using the same method [TechCentrixSDK.signIn(…)](https://techcentrix.github.io/resources/android-sdk/com.techcentrix.sdk/-tech-centrix-s-d-k/sign-in.html) (or [TechCentrixSDK.signInAsync(…)](https://techcentrix.github.io/resources/android-sdk/com.techcentrix.sdk/-tech-centrix-s-d-k/sign-in-async.html) for Java developers). Both methods require a special authentication "one time token" which your backend should get from our backend for that particular user (see [How to integrate with a TechCentrix system](https://techcentrix.github.io/#how-to-integrate-with-a-techcentrix-system)).
+To use our SDK, you need a signed in user. You can create a new user or sign in an existing one using the same method [TechCentrixSDK.signIn(…)](https://techcentrix.github.io/resources/android-sdk/com.techcentrix.sdk/-tech-centrix-s-d-k/sign-in.html) (or [TechCentrixSDK.signInAsync(…)](https://techcentrix.github.io/resources/android-sdk/com.techcentrix.sdk/-tech-centrix-s-d-k/sign-in-async.html) for Java developers). Both methods require a special authentication "one time token" which your backend should get from our backend for that particular user (see [How to integrate with a TechCentrix system](https://techcentrix.github.io/quick-start-guide)).
 
 Before starting SDK UI, you must check if a user [is signed in](https://techcentrix.github.io/resources/android-sdk/com.techcentrix.sdk/-tech-centrix-s-d-k/is-signed-in.html). If the user is signed in you can start UI via [TechCentrixActivity.start(…)](https://techcentrix.github.io/resources/android-sdk/com.techcentrix.sdk.ui/-tech-centrix-activity/start.html) method. If the user is not signed in, `TechCentrixActivity` will finish itself immediately.
 
