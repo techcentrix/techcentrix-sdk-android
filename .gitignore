@@ -1,0 +1,26 @@
+# Ignore OS files
+
+# Windows
+Thumbs.db
+
+# Linux
+.directory
+*~
+
+# MacOS
+.DS_Store
+
+# Gradle support
+.gradle
+build
+
+# Android Studio/IntelliJ
+/local.properties
+/buildSrc/local.properties
+*.iml
+.idea
+/projectFilesBackup/
+
+#Fastlane
+fastlane/README.md
+fastlane/report.xml

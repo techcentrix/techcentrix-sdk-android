@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TechCentrix SDK Demo (Java)</string>
+    <string name="launch_sdk">Launch SDK</string>
+    <string name="oops_something_went_wrong_try_again">Oops, something went wrong.\nPlease try again later.</string>
+</resources>

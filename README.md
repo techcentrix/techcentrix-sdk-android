@@ -8,6 +8,7 @@ TechCentrix SDK is an Android framework for connecting mobile app and TechCentri
   * [Step 5 - SDK Usage](#step-5---sdk-usage)
   * [Step 6 - Passing TechCentrix's push notifications](#step-6---passing-techcentrixs-push-notifications)
 - [API Documentation](#api-documentation)
+- [Demo applications](#demo-applications)
 - [Credits](#credits)
 - [Licence](#licence)
 
@@ -161,6 +162,23 @@ class DemoFirebaseMessagingService : FirebaseMessagingService() {
 ## API Documentation
 
 We have more in-depth [API documentation](https://techcentrix.github.io/resources/android-sdk/) for TechCentrix SDK.
+
+## Demo applications
+We prepare two demo applications (one written in Kotlin and one in Java), so you can try out our SDK in a few steps:
+
+1. Clone this repository.
+2. Open project in Android Studio (Android Studio 3.4 or newer is required).
+3. Provide the following properties in the main `gradle.properties` file:
+```
+# SDK properties
+repo_username=TODO
+repo_password=TODO
+mobile_api_key=TODO
+one_time_token=TODO
+```
+4. Click "Sync Project with Gradle Files" in Android Studio to sync your project.
+5. Run `demo_kotlin` or `demo_java` application.
+6. Click "Launch SDK" button (please remember that "one time token" has a very short expiry date so if you see an error you may need to generate a new one).
 
 ## Credits
 
