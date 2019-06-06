@@ -1,4 +1,4 @@
-TechCentrix SDK is an Android framework for connecting mobile app and TechCentrix Bluetooth devices, like clips or wristbands. The SDK is provided as an Android Library that can be included in your application with Gradle. 
+TechCentrix SDK is an Android framework for connecting mobile app and TechCentrix Bluetooth devices, like clips or wristbands. The SDK is provided as an Android Library that can be included in your application with Gradle.
 
 - [TechCentrix SDK](#techcentrix-sdk)
   * [Step 1 - Integrate your backend with TechCentrix backend](#step-1---integrate-your-backend-with-techcentrix-backend)
@@ -64,6 +64,10 @@ If your application has [Auto Backup](https://developer.android.com/guide/topics
     <exclude domain="database" path="com.techcentrix.main.db"/>
 </full-backup-content>
 ```
+
+#### Firebase
+
+Add *Firebase Server Key* to our [TechCentrix Config file](https://sdk.techcentrix.com/quick-start-guide#dictionary). Please use 1 *Firebase Server Key* for Android & iOS apps.
 
 ### Step 3 - SDK Initialization
 To initialize SDK, include the following code in your `Application` class :
