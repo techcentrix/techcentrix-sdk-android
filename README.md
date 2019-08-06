@@ -110,15 +110,15 @@ You can configure UI by providing the following resources in your application:
 Name | Description
 --- | ---
 `tcx_primary` | Primary color that is used across the app
-`tcx_secondary` | Secondary color that is used across the app
+`tcx_primary_light` | Primary light color that is used across the app
 
 #### Drawable resources
 Item | Description | Image  | Screenshot
 --- | --- | --- | ---
-`tcx_img_product` | Name of an image that is used on a "List of Clips" screen | <img src="website/assets/img_product.png?raw=true" width="250"> | <img src="website/img_product.png?raw=true" width="250">
-`tcx_img_product_add_new` | Name of an image that is used on a "Add New Clip" screen | <img src="website/assets/img_product_add_new.png?raw=true" width="250"> | <img src="website/img_product_add_new.png?raw=true" width="250">
-`tcx_img_product_pairing` | Name of an image that is used on a Pairing screen | <img src="website/assets/img_product_pairing.png?raw=true" width="250"> | <img src="website/img_product_pairing.png?raw=true" width="250">
-`tcx_img_product_pairing_on_off` | Name of an image that is used on a Pairing screen with zoomed On/Off button | <img src="website/assets/img_product_pairing_on_off.png?raw=true" width="250"> | <img src="website/img_product_pairing_on_off.png?raw=true" width="250">
+`tcx_img_product` | Name of an image that is used on a "List of Clips" screen | <img src="website/img_product.png?raw=true" width="250"> | <img src="website/screen_product.png?raw=true" width="250">
+`tcx_img_product_add_new` | Name of an image that is used on a "Add New Clip" screen | <img src="website/img_product_add_new.png?raw=true" width="250"> | <img src="website/screen_product_add_new.png?raw=true" width="250">
+`tcx_img_product_pairing` | Name of an image that is used on a Pairing screen | <img src="website/img_product_pairing.png?raw=true" width="250"> | <img src="website/screen_product_pairing.png?raw=true" width="250">
+`tcx_img_product_pairing_on_off` | Name of an image that is used on a Pairing screen with zoomed On/Off button | <img src="website/img_product_pairing_on_off.png?raw=true" width="250"> | <img src="website/screen_product_pairing_on_off.png?raw=true" width="250">
 
 
 Your resources will overwrite SDK resources during building final APK as described in [Resource merging](https://developer.android.com/studio/write/add-resources.html#resource_merging).
