@@ -15,11 +15,13 @@ import com.techcentrix.sdk.ui.TechCentrixActivity;
 
 public class DemoActivity extends AppCompatActivity {
 
+    public DemoActivity() {
+        super(R.layout.activity_demo);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        setContentView(R.layout.activity_demo);
 
         ProgressBar actionBarProgressBar = findViewById(R.id.actionBarProgressBar);
         Button launchSDKButton = findViewById(R.id.launchSDKButton);

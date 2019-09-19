@@ -3,16 +3,13 @@ package com.techcentrix.sdk.demo_kotlin.ui
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.techcentrix.sdk.TechCentrixSDK
 import com.techcentrix.sdk.demo_kotlin.BuildConfig
 import com.techcentrix.sdk.demo_kotlin.util.Event
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
-import kotlin.coroutines.CoroutineContext
 
-class DemoViewModel : ViewModel(), CoroutineScope {
+class DemoViewModel : ViewModel() {
 
     private val _viewState = MutableLiveData<ViewState>()
     val viewState: LiveData<ViewState>
@@ -22,11 +19,7 @@ class DemoViewModel : ViewModel(), CoroutineScope {
     val viewCommand: LiveData<Event<ViewCommand>>
         get() = _viewCommand
 
-    private val job = Job()
-
-    override val coroutineContext: CoroutineContext = job + Dispatchers.Main
-
-    fun launchSDK() = launch {
+    fun launchSDK() = viewModelScope.launch {
         if (TechCentrixSDK.isSignedIn()) {
             _viewCommand.value = Event(ViewCommand.LaunchSDK)
         } else {
@@ -40,12 +33,6 @@ class DemoViewModel : ViewModel(), CoroutineScope {
                 _viewCommand.value = Event(ViewCommand.ShowError)
             }
         }
-    }
-
-    override fun onCleared() {
-        super.onCleared()
-
-        job.cancel()
     }
 
     data class ViewState(val progressBarVisible: Boolean, val launchButtonEnabled: Boolean)
