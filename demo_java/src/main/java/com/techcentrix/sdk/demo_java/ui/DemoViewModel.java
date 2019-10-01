@@ -15,13 +15,13 @@ public class DemoViewModel extends ViewModel {
 
     private Future<Boolean> signInFuture = null;
 
-    private MutableLiveData<ViewState> _viewState = new MutableLiveData<>();
+    private final MutableLiveData<ViewState> _viewState = new MutableLiveData<>();
 
     LiveData<ViewState> getViewState() {
         return _viewState;
     }
 
-    private MutableLiveData<Event<ViewCommand>> _viewCommand = new MutableLiveData<>();
+    private final MutableLiveData<Event<ViewCommand>> _viewCommand = new MutableLiveData<>();
 
     LiveData<Event<ViewCommand>> getViewCommand() {
         return _viewCommand;
