@@ -34,11 +34,9 @@ Add TechCentrix repository to your project-level `build.gradle` file. To access 
 allprojects {
     repositories {
         google()
-        mavenCentral()
+        jcenter()
 
-        maven {
-            url "https://maven.techcentrix.com/artifactory/android-sdk-release"
-
+        maven("https://maven.techcentrix.com/artifactory/android-sdk-release") {
             credentials {
                 username YOUR_USERNAME
                 password YOUR_PASSWORD
@@ -50,7 +48,7 @@ allprojects {
 
 Add this snippet to your `build.gradle` file to use this SDK:
 ```
-implementation "com.techcentrix:android-sdk:1.2.3"
+implementation("com.techcentrix:android-sdk:1.2.3")
 ```
 
 #### Project configuration
@@ -174,10 +172,10 @@ We prepare two demo applications (one written in Kotlin and one in Java), so you
 3. Provide the following properties in the main `gradle.properties` file:
 ```
 # SDK properties
-repo_username=TODO
-repo_password=TODO
-mobile_api_key=TODO
-one_time_token=TODO
+repoUsername=TODO
+repoPassword=TODO
+mobileApiKey=TODO
+oneTimeToken=TODO
 ```
 4. Click "Sync Project with Gradle Files" in Android Studio to sync your project.
 5. Run `demo_kotlin` or `demo_java` application.
