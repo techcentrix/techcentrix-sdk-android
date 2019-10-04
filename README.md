@@ -50,7 +50,7 @@ allprojects {
 
 Add this snippet to your `build.gradle` file to use this SDK:
 ```
-implementation "com.techcentrix:android-sdk:1.2.1"
+implementation "com.techcentrix:android-sdk:1.2.2"
 ```
 
 #### Project configuration
