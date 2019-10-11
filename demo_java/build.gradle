@@ -42,5 +42,5 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation "com.techcentrix:android-sdk:1.2.2"
+    implementation "com.techcentrix:android-sdk:1.2.3"
 }
