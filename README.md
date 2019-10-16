@@ -29,7 +29,7 @@ TechCentrix SDK is an Android framework for connecting mobile app and TechCentri
 * project based on [AndroidX](https://developer.android.com/jetpack/androidx) libraries (old Android Support libraries are not supported)
 
 #### Installation with Gradle
-Add TechCentrix repository to your project-level `build.gradle` file. To access the repository, you need to obtain a username and password from [TechCentrix](https://techcentrix.com):
+Add TechCentrix repository to your project-level `build.gradle.kts` file. To access the repository, you need to obtain a username and password from [TechCentrix](https://techcentrix.com):
 ```
 allprojects {
     repositories {
@@ -46,7 +46,7 @@ allprojects {
 }
 ```
 
-Add this snippet to your `build.gradle` file to use this SDK:
+Add this snippet to your `build.gradle.kts` file to use this SDK:
 ```
 implementation("com.techcentrix:android-sdk:1.2.3")
 ```
