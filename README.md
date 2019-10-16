@@ -168,7 +168,7 @@ We have more in-depth [API documentation](https://techcentrix.github.io/resource
 We prepare two demo applications (one written in Kotlin and one in Java), so you can try out our SDK in a few steps:
 
 1. Clone this repository.
-2. Open project in Android Studio (Android Studio 3.4 or newer is required).
+2. **Import project** in Android Studio (Android Studio 3.5 or newer is required).
 3. Provide the following properties in the main `gradle.properties` file:
 ```
 # SDK properties
