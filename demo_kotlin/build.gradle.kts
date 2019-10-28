@@ -30,12 +30,10 @@ android {
 
     buildTypes {
         named("debug") {
-            buildConfigField("String", "MOBILE_API_KEY", "\"${mobileApiKey}\"")
             buildConfigField("String", "ONE_TIME_TOKEN", "\"${oneTimeToken}\"")
         }
 
         named("release") {
-            buildConfigField("String", "MOBILE_API_KEY", "\"${mobileApiKey}\"")
             buildConfigField("String", "ONE_TIME_TOKEN", "\"${oneTimeToken}\"")
 
             isMinifyEnabled = false
@@ -49,5 +47,5 @@ dependencies {
     implementation(kotlin("stdlib", KotlinCompilerVersion.VERSION))
     implementation("androidx.activity:activity-ktx:1.0.0")
 
-    implementation("com.techcentrix:android-sdk:1.2.3")
+    implementation("com.techcentrix:android-sdk:1.3.1")
 }

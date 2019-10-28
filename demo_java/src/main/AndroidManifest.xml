@@ -13,6 +13,10 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
 
+        <meta-data
+            android:name="com.techcentrix.sdk.mobileApiKey"
+            android:value="@string/techcentrix_sdk_mobile_api_key" />
+
         <activity android:name=".ui.DemoActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

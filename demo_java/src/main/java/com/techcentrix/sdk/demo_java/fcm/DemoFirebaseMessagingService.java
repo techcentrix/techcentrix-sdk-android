@@ -11,7 +11,7 @@ public class DemoFirebaseMessagingService extends FirebaseMessagingService {
     @Override
     public void onMessageReceived(@NonNull RemoteMessage message) {
         if (TechCentrixSDK.isTechCentrixPushMessage(message)) {
-            TechCentrixSDK.handlePushMessage(message);
+            TechCentrixSDK.handlePushMessage(this, message);
         } else {
             // Your existing code for handling push messages
         }
