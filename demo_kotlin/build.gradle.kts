@@ -42,10 +42,17 @@ android {
     }
 }
 
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile::class).all {
+    kotlinOptions {
+        jvmTarget = "1.8"
+        freeCompilerArgs = freeCompilerArgs + "-progressive"
+    }
+}
+
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
     implementation(kotlin("stdlib", KotlinCompilerVersion.VERSION))
     implementation("androidx.activity:activity-ktx:1.0.0")
 
-    implementation("com.techcentrix:android-sdk:1.3.1")
+    implementation("com.techcentrix:android-sdk:1.3.2")
 }
