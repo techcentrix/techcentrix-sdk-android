@@ -49,7 +49,7 @@ allprojects {
 
 Add this snippet to your `build.gradle.kts` file to use this SDK:
 ```
-implementation("com.techcentrix:android-sdk:1.3.1")
+implementation("com.techcentrix:android-sdk:1.3.2")
 ```
 
 #### Project configuration
