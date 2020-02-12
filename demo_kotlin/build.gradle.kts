@@ -11,7 +11,7 @@ val oneTimeToken: String by project
 
 android {
     compileSdkVersion(29)
-    buildToolsVersion = "29.0.2"
+    buildToolsVersion = "29.0.3"
 
     defaultConfig {
         applicationId = "com.techcentrix.sdk.demo_kotlin"
@@ -52,7 +52,7 @@ tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile::class).all {
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
     implementation(kotlin("stdlib", KotlinCompilerVersion.VERSION))
-    implementation("androidx.activity:activity-ktx:1.0.0")
+    implementation("androidx.activity:activity-ktx:1.1.0")
 
-    implementation("com.techcentrix:android-sdk:1.3.2")
+    implementation("com.techcentrix:android-sdk:1.3.4")
 }

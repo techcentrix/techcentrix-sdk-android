@@ -7,7 +7,7 @@ val oneTimeToken: String by project
 
 android {
     compileSdkVersion(29)
-    buildToolsVersion = "29.0.2"
+    buildToolsVersion = "29.0.3"
 
     defaultConfig {
         applicationId = "com.techcentrix.sdk.demo_java"
@@ -41,5 +41,5 @@ android {
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
 
-    implementation("com.techcentrix:android-sdk:1.3.2")
+    implementation("com.techcentrix:android-sdk:1.3.4")
 }

@@ -6,7 +6,7 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.techcentrix.sdk.demo_java.R;
@@ -26,7 +26,7 @@ public class DemoActivity extends AppCompatActivity {
         ProgressBar actionBarProgressBar = findViewById(R.id.actionBarProgressBar);
         Button launchSDKButton = findViewById(R.id.launchSDKButton);
 
-        DemoViewModel viewModel = ViewModelProviders.of(this).get(DemoViewModel.class);
+        DemoViewModel viewModel = new ViewModelProvider(this).get(DemoViewModel.class);
 
         viewModel.getViewState().observe(this, it -> {
             actionBarProgressBar.setVisibility(it.isProgressBarVisible() ? View.VISIBLE : View.INVISIBLE);
