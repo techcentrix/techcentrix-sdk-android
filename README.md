@@ -49,7 +49,7 @@ allprojects {
 
 Add this snippet to your `build.gradle.kts` file to use this SDK:
 ```
-implementation("com.techcentrix:android-sdk:1.3.4")
+implementation("com.techcentrix:android-sdk:1.4.1")
 ```
 
 #### Project configuration
@@ -87,25 +87,30 @@ and replace `YOUR_MOBILE_API_KEY` with the key provided by TechCentrix.
 ```
 
 ### Step 4 - UI Configuration
-You can configure UI by providing the following resources in your application:
+#### Dark theme
+Our SDK supports [Dark theme](https://developer.android.com/guide/topics/ui/look-and-feel/darktheme) out of the box. On Android 10 and higher, by default, it will automatically switch to light/dark theme based on the system-wide setting. On Android 9 and lower, it will use the light theme by default. If you want to force a particular theme or to allow users to change the theme while the app is running you must use `AppCompatDelegate.setDefaultNightMode()` method as described in [Changing themes in-app](https://developer.android.com/guide/topics/ui/look-and-feel/darktheme#changing_themes_in-app) (sample implementation can be found in our demo apps or [Android DarkTheme Sample](https://github.com/android/user-interface-samples/tree/master/DarkTheme)).
 
-#### Color resources
+#### Resources
+You can configure UI by providing the following resources in your application. You can provide alternative resources for the dark theme by using the `-night` qualifier on your resource folders (`drawable-night` and `values-night`).
+
+##### Color resources
 Name | Description
 --- | ---
 `tcx_primary` | Primary color that is used across the app
-`tcx_primary_light` | Primary light color that is used across the app
+`tcx_secondary` | Secondary color that is used across the app
 
-#### Drawable resources
-Item | Description | Image  | Screenshot
---- | --- | --- | ---
-`tcx_img_product` | Name of an image that is used on a "List of Clips" screen | <img src="website/img_product.png?raw=true" width="250"> | <img src="website/screen_product_light.png?raw=true" width="250">
-`tcx_img_product_add_new` | Name of an image that is used on a "Add New Clip" screen | <img src="website/img_product_add_new.png?raw=true" width="250"> | <img src="website/screen_product_add_new_light.png?raw=true" width="250">
-`tcx_img_product_pairing_on_off` | Name of an image that is used on a Pairing screen with zoomed On/Off button | <img src="website/img_product_pairing_on_off.png?raw=true" width="250"> | <img src="website/screen_product_pairing_on_off_light.png?raw=true" width="250">
+##### Drawable resources
+Item | Description | Image  | Screenshot (light theme) | Screenshot (dark theme)
+--- | --- | --- | --- | ---
+`tcx_img_product` | Name of an image that is used on a "List of Clips" screen | <img src="website/img_product.png?raw=true" width="250"> | <img src="website/screen_product_light.png?raw=true" width="250"> | <img src="website/screen_product_dark.png?raw=true" width="250">
+`tcx_img_product_add_new` | Name of an image that is used on a "Add New Clip" screen | <img src="website/img_product_add_new.png?raw=true" width="250"> | <img src="website/screen_product_add_new_light.png?raw=true" width="250"> | <img src="website/screen_product_add_new_dark.png?raw=true" width="250">
+`tcx_img_product_pairing_on_off` | Name of an image that is used on a Pairing screen with zoomed On/Off button | <img src="website/img_product_pairing_on_off.png?raw=true" width="250"> | <img src="website/screen_product_pairing_on_off_light.png?raw=true" width="250"> | <img src="website/screen_product_pairing_on_off_dark.png?raw=true" width="250">
 
 
 Your resources overwrite SDK resources during building the final APK as described in [Resource merging](https://developer.android.com/studio/write/add-resources.html#resource_merging).
 
 **Important: You must provide images in MDPI, HDPI, XHDPI, XXHDPI, XXXHDPI densities.** If you don't provide images for all listed densities, your application will show SDK images on devices with densities for which you didn't provide resources.
+
 
 ### Step 5 - SDK Usage
 To use our SDK, you need a signed-in user. You can create a new user or sign in an existing one using the same method [TechCentrixSDK.signIn(…)](https://techcentrix.github.io/resources/android-sdk/com.techcentrix.sdk/-tech-centrix-s-d-k/sign-in.html) (or [TechCentrixSDK.signInAsync(…)](https://techcentrix.github.io/resources/android-sdk/com.techcentrix.sdk/-tech-centrix-s-d-k/sign-in-async.html) for Java developers). Both methods require a special authentication "one time token," which your backend should get from our backend for that particular user (see [How to integrate with a TechCentrix system](https://techcentrix.github.io/quick-start-guide)).
