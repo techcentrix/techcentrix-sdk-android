@@ -98,9 +98,9 @@ Name | Description
 #### Drawable resources
 Item | Description | Image  | Screenshot
 --- | --- | --- | ---
-`tcx_img_product` | Name of an image that is used on a "List of Clips" screen | <img src="website/img_product.png?raw=true" width="250"> | <img src="website/screen_product.png?raw=true" width="250">
-`tcx_img_product_add_new` | Name of an image that is used on a "Add New Clip" screen | <img src="website/img_product_add_new.png?raw=true" width="250"> | <img src="website/screen_product_add_new.png?raw=true" width="250">
-`tcx_img_product_pairing_on_off` | Name of an image that is used on a Pairing screen with zoomed On/Off button | <img src="website/img_product_pairing_on_off.png?raw=true" width="250"> | <img src="website/screen_product_pairing_on_off.png?raw=true" width="250">
+`tcx_img_product` | Name of an image that is used on a "List of Clips" screen | <img src="website/img_product.png?raw=true" width="250"> | <img src="website/screen_product_light.png?raw=true" width="250">
+`tcx_img_product_add_new` | Name of an image that is used on a "Add New Clip" screen | <img src="website/img_product_add_new.png?raw=true" width="250"> | <img src="website/screen_product_add_new_light.png?raw=true" width="250">
+`tcx_img_product_pairing_on_off` | Name of an image that is used on a Pairing screen with zoomed On/Off button | <img src="website/img_product_pairing_on_off.png?raw=true" width="250"> | <img src="website/screen_product_pairing_on_off_light.png?raw=true" width="250">
 
 
 Your resources overwrite SDK resources during building the final APK as described in [Resource merging](https://developer.android.com/studio/write/add-resources.html#resource_merging).
