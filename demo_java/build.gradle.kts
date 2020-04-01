@@ -41,5 +41,5 @@ android {
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
 
-    implementation("com.techcentrix:android-sdk:1.3.4")
+    implementation("com.techcentrix:android-sdk:1.4.1")
 }

@@ -3,4 +3,10 @@
 
     <string name="techcentrix_sdk_mobile_api_key">YOUR_MOBILE_API_KEY</string>
 
+    <string-array name="tcx_prefs_theme_values">
+        <item>LIGHT</item>
+        <item>DARK</item>
+        <item>DEFAULT</item>
+    </string-array>
+
 </resources>

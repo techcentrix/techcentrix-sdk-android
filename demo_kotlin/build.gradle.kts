@@ -54,5 +54,5 @@ dependencies {
     implementation(kotlin("stdlib", KotlinCompilerVersion.VERSION))
     implementation("androidx.activity:activity-ktx:1.1.0")
 
-    implementation("com.techcentrix:android-sdk:1.3.4")
+    implementation("com.techcentrix:android-sdk:1.4.1")
 }

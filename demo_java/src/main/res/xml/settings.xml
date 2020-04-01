@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ListPreference
+        android:title="@string/settings_theme"
+        app:defaultValue="DEFAULT"
+        app:dialogTitle="@string/settings_theme_dialog_title"
+        app:entries="@array/prefs_theme_entries"
+        app:entryValues="@array/tcx_prefs_theme_values"
+        app:icon="@drawable/ic_brightness_medium_24dp"
+        app:key="pref_key_theme"
+        app:useSimpleSummaryProvider="true" />
+
+</PreferenceScreen>
