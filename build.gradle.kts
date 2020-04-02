@@ -20,6 +20,15 @@ buildscript {
     }
 }
 
+val androidxCoreVersion by extra("1.2.0")
+val appCompatVersion by extra("1.1.0")
+val materialVersion by extra("1.1.0")
+val androidxPreferenceVersion by extra("1.1.0")
+val androidxLifecycleVersion by extra("2.2.0")
+val constraintLayoutVersion by extra("1.1.3")
+val coroutinesVersion by extra("1.3.5")
+val firebaseMessagingVersion by extra("20.1.4")
+
 // https://github.com/ben-manes/gradle-versions-plugin/blob/master/examples/kotlin/build.gradle.kts
 fun isNonStable(version: String): Boolean {
     val stableKeyword = listOf("RELEASE", "FINAL", "GA").any { version.toUpperCase().contains(it) }
