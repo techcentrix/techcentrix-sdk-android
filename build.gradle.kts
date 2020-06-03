@@ -13,8 +13,8 @@ buildscript {
     }
 
     dependencies {
-        classpath("com.android.tools.build:gradle:3.6.2")
-        classpath(kotlin("gradle-plugin", version = "1.3.71"))
+        classpath("com.android.tools.build:gradle:3.6.3")
+        classpath(kotlin("gradle-plugin", version = "1.3.72"))
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -23,11 +23,11 @@ buildscript {
 val androidxCoreVersion by extra("1.2.0")
 val appCompatVersion by extra("1.1.0")
 val materialVersion by extra("1.1.0")
-val androidxPreferenceVersion by extra("1.1.0")
+val androidxPreferenceVersion by extra("1.1.1")
 val androidxLifecycleVersion by extra("2.2.0")
 val constraintLayoutVersion by extra("1.1.3")
-val coroutinesVersion by extra("1.3.5")
-val firebaseMessagingVersion by extra("20.1.4")
+val coroutinesVersion by extra("1.3.7")
+val firebaseMessagingVersion by extra("20.2.0")
 
 // https://github.com/ben-manes/gradle-versions-plugin/blob/master/examples/kotlin/build.gradle.kts
 fun isNonStable(version: String): Boolean {

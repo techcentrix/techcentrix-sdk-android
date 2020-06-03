@@ -50,7 +50,7 @@ dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
 
     // TechCentrix SDK
-    implementation("com.techcentrix:android-sdk:1.4.2")
+    implementation("com.techcentrix:android-sdk:1.4.3")
 
     implementation("androidx.appcompat:appcompat:$appCompatVersion")
     implementation("androidx.constraintlayout:constraintlayout:$constraintLayoutVersion")

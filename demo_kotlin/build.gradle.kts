@@ -63,7 +63,7 @@ dependencies {
     implementation(kotlin("stdlib", KotlinCompilerVersion.VERSION))
 
     // TechCentrix SDK
-    implementation("com.techcentrix:android-sdk:1.4.2")
+    implementation("com.techcentrix:android-sdk:1.4.3")
 
     implementation("androidx.appcompat:appcompat:$appCompatVersion")
     implementation("androidx.core:core-ktx:$androidxCoreVersion")
